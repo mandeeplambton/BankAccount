@@ -27,7 +27,9 @@ namespace UnitTestProject1
             catch (ArgumentOutOfRangeException e)
             {
                 StringAssert.Contains(e.Message, BankAccount.DebitAmountExceedsBalanceMessage);
+                return;
 
             }
+            Assert.Fail("The expectedexception wasnot thrown.");
         }
     }
